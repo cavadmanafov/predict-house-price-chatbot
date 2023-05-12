@@ -1,0 +1,343 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - hey
+      - salam
+      - necəsən
+      - hər vaxtın xeyir
+      - axşamın xeyir
+      - sabahın xeyir
+
+  - intent: ask_price
+    examples: |
+      - Salam [Salyan](location) yaxınlığında [3-cü mərtəbədə](floor) yerləşən [2 otaqlı](rooms) [100 kvadrat](size) evin qiyməti neçəyədir?
+      - Salam [Pirallahı](location) yanında yerləşən [5-ci mərtəbədə](floor) olan [3 otaqlı](rooms) [90 kvadrat](size) evin qiymətini de
+
+  - lookup: location
+    examples: |
+      - 20 Yanvar 
+      - 20ci sahə
+      - 8 Noyabr
+      - 8ci kilometr
+      - Abşeron
+      - Albalılıq
+      - Astara 
+      - Avtovağzal 
+      - Azadlıq Prospekti
+      - Ağ şəhər 
+      - Ağcabədi 
+      - Ağdaş 
+      - Badamdar 
+      - Bahar 
+      - Bakmil
+      - Bakı 
+      - Bakıxanov 
+      - Balakən 
+      - Balaxanı 
+      - Bibi Heybət
+      - Bilgəh 
+      - Biləcəri 
+      - Biləsuvar 
+      - Binə 
+      - Binəqədi 
+      - Buzovna
+      - Böyükşor 
+      - Bülbülə 
+      - Bərdə 
+      - Ceyranbatan 
+      - Cəlilabad
+      - Digah 
+      - Dübəndi 
+      - Dədə Qorqud 
+      - Dərnəgül
+      - Elmlər Akademiyası 
+      - Goranboy 
+      - Görədil 
+      - Göygöl 
+      - Günəşli
+      - Gədəbəy 
+      - Gənclik 
+      - Gəncə 
+      - Hökməli 
+      - Hövsan 
+      - Həzi Aslanov
+      - Keşlə 
+      - Koroğlu 
+      - Kubinka 
+      - Köhnə Günəşli 
+      - Kürdəxanı
+      - Lökbatan 
+      - Lənkəran 
+      - M.Ə.Rəsulzadə 
+      - Masallı 
+      - Masazır
+      - Massiv A 
+      - Massiv B 
+      - Massiv D 
+      - Massiv G 
+      - Massiv V
+      - Maştağa 
+      - Mehdiabad 
+      - Memar Əcəmi 
+      - Mingəçevir 
+      - Müşfiqabad
+      - Məmmədli 
+      - Mərdəkan 
+      - NZS 
+      - Naftalan 
+      - Nardaran 
+      - Naxçıvan
+      - Neftçala 
+      - Neftçilər 
+      - Nizami 
+      - Novxanı 
+      - Nəriman Nərimanov
+      - Nərimanov 
+      - Nəsimi 
+      - Oğuz 
+      - Pirallahı 
+      - Pirşağı
+      - Pirəkəşkül 
+      - Qala 
+      - Qaradağ 
+      - Qaraçuxur 
+      - Qax 
+      - Qazax
+      - Qobu 
+      - Quba 
+      - Qusar 
+      - Qızıldaş 
+      - Qəbələ 
+      - Ramana 
+      - Sabunçu
+      - Sahil 
+      - Salyan 
+      - Samux 
+      - Savalan 
+      - Sea Breeze 
+      - Siyəzən
+      - Sulutəpə 
+      - Suraxanı 
+      - Səbail 
+      - Tovuz 
+      - Türkan 
+      - Ulduz
+      - Xalqlar Dostluğu 
+      - Xaçmaz 
+      - Xocəsən 
+      - Xudat 
+      - Xutor
+      - Xırdalan 
+      - Xızı 
+      - Xətai 
+      - Xəzər 
+      - Yardımlı 
+      - Yasamal
+      - Yeni Corat 
+      - Yeni Günəşli 
+      - Yeni Ramana 
+      - Yeni Suraxanı
+      - Yeni Yasamal 
+      - Yevlax 
+      - Zabrat 
+      - Zaqatala 
+      - Zirə 
+      - Zığ
+      - Çiçək 
+      - İmişli 
+      - İnşaatçılar 
+      - İçəri Şəhər 
+      - Şabran
+      - Şamaxı 
+      - Şağan 
+      - Şimal 
+      - DRES 
+      - Şirvan 
+      - Şüvəlan 
+      - Şıxov
+      - Şəki 
+      - Şəmkir 
+      - Əhmədli 
+      - Ələt 
+      - Əmircan
+      - 20 Yanvar metrosu
+      - 20ci sahə qəsəbəsi
+      - 8 Noyabr metrosu
+      - 8ci kilometr qəsəbəsi
+      - Abşeron rayonu
+      - Albalılıq qəsəbəsi
+      - Avtovağzal metrosu
+      - Azadlıq Prospekti metrosu
+      - Ağ şəhər qəsəbəsi
+      - Badamdar qəsəbəsi
+      - Bahar qəsəbəsi
+      - Bakmil metrosu
+      - Bakıxanov qəsəbəsi
+      - Balaxanı qəsəbəsi
+      - Bibi Heybət qəsəbəsi
+      - Bilgəh qəsəbəsi
+      - Biləcəri qəsəbəsi
+      - Binə qəsəbəsi
+      - Binəqədi qəsəbəsi
+      - Binəqədi rayonu
+      - Buzovna qəsəbəsi
+      - Böyükşor qəsəbəsi
+      - Bülbülə qəsəbəsi
+      - Ceyranbatan qəsəbəsi
+      - Digah qəsəbəsi
+      - Dübəndi qəsəbəsi
+      - Dədə Qorqud qəsəbəsi
+      - Dərnəgül metrosu
+      - Elmlər Akademiyası metrosu
+      - Görədil qəsəbəsi
+      - Günəşli qəsəbəsi
+      - Gənclik metrosu
+      - Hökməli qəsəbəsi
+      - Hövsan qəsəbəsi
+      - Həzi Aslanov metrosu
+      - Həzi Aslanov qəsəbəsi
+      - Keşlə qəsəbəsi
+      - Koroğlu metrosu
+      - Kubinka qəsəbəsi
+      - Köhnə Günəşli qəsəbəsi
+      - Kürdəxanı qəsəbəsi
+      - Lökbatan qəsəbəsi
+      - M.Ə.Rəsulzadə qəsəbəsi
+      - Masazır qəsəbəsi
+      - Massiv A qəsəbəsi
+      - Massiv B qəsəbəsi
+      - Massiv D qəsəbəsi
+      - Massiv G qəsəbəsi
+      - Massiv V qəsəbəsi
+      - Maştağa qəsəbəsi
+      - Mehdiabad qəsəbəsi
+      - Memar Əcəmi metrosu
+      - Müşfiqabad qəsəbəsi
+      - Məmmədli qəsəbəsi
+      - Mərdəkan qəsəbəsi
+      - NZS qəsəbəsi
+      - Nardaran qəsəbəsi
+      - Neftçilər metrosu
+      - Nizami metrosu
+      - Nizami rayonu
+      - Novxanı qəsəbəsi
+      - Nəriman Nərimanov metrosu
+      - Nərimanov rayonu
+      - Nəsimi metrosu
+      - Nəsimi rayonu
+      - Pirallahı rayonu
+      - Pirşağı qəsəbəsi
+      - Pirəkəşkül qəsəbəsi
+      - Qala qəsəbəsi
+      - Qaradağ rayonu
+      - Qaraçuxur qəsəbəsi
+      - Qobu qəsəbəsi
+      - Qızıldaş qəsəbəsi
+      - Ramana qəsəbəsi
+      - Sabunçu qəsəbəsi
+      - Sabunçu rayonu
+      - Sahil metrosu
+      - Sahil qəsəbəsi
+      - Savalan qəsəbəsi
+      - Sulutəpə qəsəbəsi
+      - Suraxanı qəsəbəsi
+      - Suraxanı rayonu
+      - Səbail rayonu
+      - Türkan qəsəbəsi
+      - Ulduz metrosu
+      - Xalqlar Dostluğu metrosu
+      - Xocəsən metrosu
+      - Xocəsən qəsəbəsi
+      - Xutor qəsəbəsi
+      - Xətai rayonu
+      - Xəzər rayonu
+      - Yasamal qəsəbəsi
+      - Yasamal rayonu
+      - Yeni Corat qəsəbəsi
+      - Yeni Günəşli qəsəbəsi
+      - Yeni Ramana qəsəbəsi
+      - Yeni Suraxanı qəsəbəsi
+      - Yeni Yasamal qəsəbəsi
+      - Zabrat qəsəbəsi
+      - Zirə qəsəbəsi
+      - Zığ qəsəbəsi
+      - Çiçək qəsəbəsi
+      - İnşaatçılar metrosu
+      - İçəri Şəhər metrosu
+      - Şağan qəsəbəsi
+      - Şimal DRES qəsəbəsi
+      - Şüvəlan qəsəbəsi
+      - Şıxov qəsəbəsi
+      - Əhmədli metrosu
+      - Əhmədli qəsəbəsi
+      - Ələt qəsəbəsi
+      - Əmircan qəsəbəsi
+  - intent: goodbye
+    examples: |
+      - sağol
+      - sagol
+      - görüşərik
+      - əlvida
+      - hələlik
+
+  - intent: affirm
+    examples: |
+      - yes
+      - y
+      - indeed
+      - of course
+      - that sounds good
+      - correct
+
+  - intent: deny
+    examples: |
+      - no
+      - n
+      - never
+      - I don't think so
+      - don't like that
+      - no way
+      - not really
+
+  - intent: mood_great
+    examples: |
+      - perfect
+      - great
+      - amazing
+      - feeling like a king
+      - wonderful
+      - I am feeling very good
+      - I am great
+      - I am amazing
+      - I am going to save the world
+      - super stoked
+      - extremely good
+      - so so perfect
+      - so good
+      - so perfect
+
+  - intent: mood_unhappy
+    examples: |
+      - my day was horrible
+      - I am sad
+      - I don't feel very well
+      - I am disappointed
+      - super sad
+      - I'm so sad
+      - sad
+      - very sad
+      - unhappy
+      - not good
+      - not very good
+      - extremly sad
+      - so saad
+      - so sad
+
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
