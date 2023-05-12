@@ -1,0 +1,7 @@
+This Python code scrapes the website "https://bina.az/items/all" using the BeautifulSoup library and stores the data in a Pandas DataFrame. It then performs some data cleaning, data analysis, and data preprocessing.
+
+The code first imports the necessary libraries such as requests, BeautifulSoup, NumPy, and Pandas. It then defines the URL of the website to scrape, which contains a list of properties in Azerbaijan. The code sends a request to the URL and retrieves the HTML content of the webpage. Using BeautifulSoup, the code parses the HTML content and finds all the div elements that have the class "card_params". These div elements contain the information about each property such as its price, sale type, location, number of rooms, floor, and area. The code then uses regular expressions to extract the required information from the div elements and store it in a Pandas DataFrame.
+
+Next, the code performs some data cleaning by removing unnecessary characters and converting the data types of some columns to appropriate formats. The code then performs some data analysis by calculating descriptive statistics, correlation matrix, and boxplots of some columns. The code also removes outliers from the data by using the interquartile range method.
+
+Finally, the code performs some data modeling using the XGB regressor algorithm from the Scikit-Learn library. It splits the data into training and testing sets, fits the model on the training set, and makes predictions on the testing set. 
